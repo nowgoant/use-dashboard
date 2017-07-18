@@ -5,6 +5,7 @@ import UsersComponent from '../components/Users/Users';
 import MainLayout from '../components/MainLayout/MainLayout';
 
 function Users({ location }) {
+  console.log('routes users ', location);
   return (
     <MainLayout location={location}>
       <div className={styles.normal}>

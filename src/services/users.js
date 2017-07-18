@@ -6,12 +6,14 @@ export function fetch({ page }) {
 }
 
 export function remove(id) {
+  console.log('services users remove')
   return request(`/api/users/${id}`, {
     method: 'DELETE',
   });
 }
 
 export function patch(id, values) {
+  console.log(`services users patch`, values)
   return request(`/api/users/${id}`, {
     method: 'PATCH',
     body: JSON.stringify(values),
@@ -19,6 +21,7 @@ export function patch(id, values) {
 }
 
 export function create(values) {
+  console.log(`services users create`, values)
   return request('/api/users', {
     method: 'POST',
     body: JSON.stringify(values),
