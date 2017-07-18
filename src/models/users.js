@@ -50,7 +50,7 @@ export default {
   subscriptions: {
     setup({ dispatch, history }) {
       return history.listen(({ pathname, query }) => {
-        console.log('models subscriptions setup', query)
+        console.log('models subscriptions setup ', pathname, query)
         if (pathname === '/users') {
           dispatch({ type: 'fetch', payload: query });
         }
