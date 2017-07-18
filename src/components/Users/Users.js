@@ -7,6 +7,8 @@ import { PAGE_SIZE } from '../../constants';
 import UserModal from './UserModal';
 
 function Users({ dispatch, list: dataSource, loading, total, page: current }) {
+  console.log('components Users', dataSource, loading, total, current);
+
   function deleteHandler(id) {
     dispatch({
       type: 'users/remove',
