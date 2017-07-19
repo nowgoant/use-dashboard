@@ -31,6 +31,7 @@ function Users({ dispatch, list: dataSource, loading, total, page: current }) {
   }
 
   function createHandler(values) {
+    console.log('components users createHandler', values);
     dispatch({
       type: 'users/create',
       payload: values,
